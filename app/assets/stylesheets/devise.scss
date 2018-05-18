@@ -1,7 +1,6 @@
 .icono_login {
 	margin-bottom: 30px;
 	font-size: x-large;
-	color: #1779ba;
 }
 
 .icono_nombre, .icono_contraseña {
@@ -10,5 +9,18 @@
 }
 
 .texto_registro {
-	padding-left: 4px !important;
+	padding-left: 10px !important;
+}
+
+.titulo_registro {
+	margin-bottom: 50px;
+}
+
+.recuerdame:hover {
+	color: black;
+	background-color: white;
+}
+
+.boton_registrar {
+	margin-top: 50px;
 }
