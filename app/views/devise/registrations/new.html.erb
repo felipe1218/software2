@@ -1,80 +1,208 @@
-<h2>Sign up</h2>
+
+<div class="row align-middle titulo_registro">
+    <div class="columns text-right large-5 icono_registro">
+        <i class="fa fa-address-card fa-3x" style="color: green;"></i>
+    </div>
+    <div class="columns large-3 registrate">
+        <h2>Regístrate</h2>
+    </div>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+<div class="row">
+    <div class="columns large-12">
+        <div class="field">
+            <div class="row align-middle" style="padding-left: 130px;">
+                <div class="columns text-right large-1 icono_nombre" style="padding-bottom: 25px;color: green;">
+                    <i class="fa fa-envelope fa-2x"></i>
+                </div>
+                <div class="columns large-9 texto_registro">
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Digite su email" %>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row align-right">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-id-card fa-2x" style="color: green;"></i>
+                </div>
+                <div class="columns large-7 texto_registro">
+                    <%= f.text_field :tipo_documento, placeholder: "Digite su tipo de documento" %>                
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :tipo_documento %><br />
-    <%= f.text_field :tipo_documento %>
-  </div>
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-id-card fa-2x" style="color: green;"></i>
+                </div>
+                <div class="columns large-7 texto_registro ">
+                    <%= f.text_field :numero_documento, placeholder: "Digite su numero de documento" %>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-  <div class="field">
-    <%= f.label :numero_documento %><br />
-    <%= f.text_field :numero_documento %>
-  </div>
+<div class="row">
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row  align-right">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-user fa-2x" style="color: green"></i>
+                </div>
+                <div class="columns large-7  texto_registro">
+                    <%= f.text_field :nombre, placeholder: "Digite su nombre" %>                
+                </div>
+            </div>
+        </div>      
+    </div>
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-phone fa-2x" style="color: green;"></i>
+                </div>
+                <div class="columns large-7  texto_registro">
+                    <%= f.text_field :telefono, placeholder: "Digite su número de telefono" %>                
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
 
-  <div class="field">
-    <%= f.label :nombre %><br />
-    <%= f.text_field :nombre %>
-  </div>
+<div class="row">
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row align-right">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-mobile fa-3x" style="color: green;"></i>
+                </div>
+                <div class="columns large-7 texto_registro">
+                    <%= f.text_field :celular, placeholder: "Digite su número de celular" %>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-map-marker fa-2x" style="color: green"></i>
+                </div>
+                <div class="columns large-7 texto_registro">
+                    <%= f.text_field :direccion, placeholder: "Digite su dirección" %>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-  <div class="field">
-    <%= f.label :telefono %><br />
-    <%= f.text_field :telefono %>
-  </div>
 
-  <div class="field">
-    <%= f.label :celular %><br />
-    <%= f.text_field :celular %>
-  </div>
+<div class="row">
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row align-right">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-flag fa-2x" style="color: green;"></i>
+                </div>
+                <div class="columns large-7 texto_registro">
+                    <%= f.text_field :ciudad, placeholder: "Digite su ciudad" %>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-flag fa-2x" style="color: green;"></i>
+                </div>
+                <div class="columns large-7 texto_registro">
+                    <%= f.text_field :departamento, placeholder: "Digite su departamento" %>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-  <div class="field">
-    <%= f.label :direccion %><br />
-    <%= f.text_field :direccion %>
-  </div>
 
-  <div class="field">
-    <%= f.label :ciudad %><br />
-    <%= f.text_field :ciudad %>
-  </div>
+<div class="row">
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row align-right">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-globe fa-2x" style="color: green;"></i>
+                </div>
+                <div class="columns large-7 texto_registro">
+                    <%= f.text_field :pais, placeholder: "Digite su pais" %>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row">
+                <div class="columns text-right large-1 icono_nombre">
+                    <i class="fa fa-briefcase fa-2x" style="color: green;"></i>
+                </div>
+                <div class="columns large-7 texto_registro">
+                    <%= f.text_field :profesion, placeholder: "Digite su profesion" %>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-  <div class="field">
-    <%= f.label :departamento %><br />
-    <%= f.text_field :departamento %>
-  </div>
+<div class="row">
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row align-right">
+                <div class="columns text-right large-1 icono_contraseña">
+                    <i class="fa fa-lock fa-2x" style="color: green"></i>
+                </div>
+                <div class="columns large-7 texto_registro">
+                    <%= f.password_field :password, autocomplete: "off", placeholder: "Digite su contraseña (minimo 6 caracteres)"  %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns large-6">
+        <div class="field">
+            <div class="row">
+                <div class="columns text-right large-1 icono_contraseña">
+                    <i class="fa fa-lock fa-2x" style="color: green"></i>
+                </div>
+                <div class="columns large-7 texto_registro" >
+                    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirme su contraseña (minimo 6 caracteres)" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-  <div class="field">
-    <%= f.label :pais %><br />
-    <%= f.text_field :pais %>
-  </div>
-
-  <div class="field">
-    <%= f.label :profesion %><br />
-    <%= f.text_field :profesion %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+<div class="actions">
+    <div class="row">
+        <div class="columns text-center large-12 boton_registrar">
+            <%= f.submit "Registrar", :class => "hollow success button" %>  
+        </div>
+    </div>
+</div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+
+
+
+    
+
