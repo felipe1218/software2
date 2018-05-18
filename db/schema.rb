@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_18_053440) do
+ActiveRecord::Schema.define(version: 2018_05_18_060938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+    t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
 
   create_table "usuarios", force: :cascade do |t|
     t.string "tipo_documento"
@@ -40,6 +50,14 @@ ActiveRecord::Schema.define(version: 2018_05_18_053440) do
     t.inet "last_sign_in_ip"
     t.index ["email"], name: "index_usuarios_on_email", unique: true
     t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
+  end
+
+  create_table "usuarios_roles", id: false, force: :cascade do |t|
+    t.bigint "usuario_id"
+    t.bigint "role_id"
+    t.index ["role_id"], name: "index_usuarios_roles_on_role_id"
+    t.index ["usuario_id", "role_id"], name: "index_usuarios_roles_on_usuario_id_and_role_id"
+    t.index ["usuario_id"], name: "index_usuarios_roles_on_usuario_id"
   end
 
 end
