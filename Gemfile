@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
 
+gem "paperclip", "~> 5.2.1"
+gem 'rmagick'
+
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'

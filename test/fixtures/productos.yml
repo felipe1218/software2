@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  descripcion: MyString
+  tipo: MyString
+  material: MyString
+  alto: 1
+  ancho: 1
+  profundidad: 1
+  color: MyString
+  peso: 1
+  ciudad: MyString
+  empresa: MyString
+
+two:
+  nombre: MyString
+  descripcion: MyString
+  tipo: MyString
+  material: MyString
+  alto: 1
+  ancho: 1
+  profundidad: 1
+  color: MyString
+  peso: 1
+  ciudad: MyString
+  empresa: MyString

@@ -1,0 +1,76 @@
+<%= form_with(model: producto, local: true) do |form| %>
+  <% if producto.errors.any? %>
+	<div id="error_explanation">
+	  <h2><%= pluralize(producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+
+	  <ul>
+	  <% producto.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+	  <% end %>
+	  </ul>
+	</div>
+  <% end %>
+
+  <div class="field">
+	<%= form.label :nombre %>
+	<%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+	<%= form.label :descripcion %>
+	<%= form.text_field :descripcion %>
+  </div>
+
+  <div class="field">
+	<%= form.label :tipo %>
+	<%= form.text_field :tipo %>
+  </div>
+
+  <div class="field">
+	<%= form.label :material %>
+	<%= form.text_field :material %>
+  </div>
+
+  <div class="field">
+	<%= form.label :alto %>
+	<%= form.number_field :alto %>
+  </div>
+
+  <div class="field">
+	<%= form.label :ancho %>
+	<%= form.number_field :ancho %>
+  </div>
+
+  <div class="field">
+	<%= form.label :profundidad %>
+	<%= form.number_field :profundidad %>
+  </div>
+
+  <div class="field">
+	<%= form.label :color %>
+	<%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+	<%= form.label :peso %>
+	<%= form.number_field :peso %>
+  </div>
+
+  <div class="field">
+	<%= form.label :ciudad %>
+	<%= form.text_field :ciudad %>
+  </div>
+
+  <div class="field">
+	<%= form.label :empresa %>
+	<%= form.text_field :empresa %>
+  </div>
+
+	<div class="field">
+		<%= form.file_field :foto %>
+	</div>
+
+  <div class="actions">
+	<%= form.submit %>
+  </div>
+<% end %>

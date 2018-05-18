@@ -7,6 +7,8 @@ class Usuario < ApplicationRecord
 	devise :database_authenticatable, :registerable,
 		:recoverable, :rememberable, :trackable, :validatable
 
+	has_many :compras, dependent: :destroy
+
 	def assign_default_role
 		self.add_role(:client) if self.roles.blank?
 	end

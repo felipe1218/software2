@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_18_060938) do
+ActiveRecord::Schema.define(version: 2018_05_18_220727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "compra_productos", force: :cascade do |t|
+    t.bigint "compra_id"
+    t.bigint "producto_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["compra_id"], name: "index_compra_productos_on_compra_id"
+    t.index ["producto_id"], name: "index_compra_productos_on_producto_id"
+  end
+
+  create_table "compras", force: :cascade do |t|
+    t.integer "valor"
+    t.string "descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "usuario_id"
+    t.index ["usuario_id"], name: "index_compras_on_usuario_id"
+  end
+
+  create_table "productos", force: :cascade do |t|
+    t.string "nombre"
+    t.string "descripcion"
+    t.string "tipo"
+    t.string "material"
+    t.integer "alto"
+    t.integer "ancho"
+    t.integer "profundidad"
+    t.string "color"
+    t.integer "peso"
+    t.string "ciudad"
+    t.string "empresa"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
@@ -60,4 +94,7 @@ ActiveRecord::Schema.define(version: 2018_05_18_060938) do
     t.index ["usuario_id"], name: "index_usuarios_roles_on_usuario_id"
   end
 
+  add_foreign_key "compra_productos", "compras"
+  add_foreign_key "compra_productos", "productos"
+  add_foreign_key "compras", "usuarios"
 end
