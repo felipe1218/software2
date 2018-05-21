@@ -1,11 +1,13 @@
 .icono_login {
 	margin-bottom: 30px;
 	font-size: x-large;
+	color: #2d6324;
 }
 
-.icono_nombre, .icono_contraseña {
+.icono_usuario, .icono_contraseña, .icono_nombre, .titulo_registro {
 	padding-right: 0px !important;
 	padding-top: 5px;
+	color: #2d6324;
 }
 
 .texto_registro {
@@ -23,4 +25,7 @@
 
 .boton_registrar {
 	margin-top: 50px;
+}
+.registrate h2 {
+	font-family: 'Roboto Condensed', sans-serif;
 }
