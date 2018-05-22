@@ -1,4 +1,4 @@
-class CreateUsuarios < ActiveRecord::Migration[5.2]
+class CreateUsuarios < ActiveRecord::Migration[5.1]
   def change
     create_table :usuarios do |t|
       t.string :tipo_documento

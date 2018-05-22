@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 u = Usuario.create(:id => 1, :tipo_documento => "Cedula", :numero_documento => "1234567", :nombre => "Felipe", :telefono => "1234567", :celular => "1234567", :direccion => "cra 67", :ciudad => "Armenia", :departamento => "Quindio", :pais => "Colombia", :profesion => "Estudiante", :email => "pipe.r6@hotmail.com", :password => "123456")
 u.add_role "admin"
+Spree::Core::Engine.load_seed if defined?(Spree::Core)
+Spree::Auth::Engine.load_seed if defined?(Spree::Auth)

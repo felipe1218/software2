@@ -1,4 +1,4 @@
-class CreateCompras < ActiveRecord::Migration[5.2]
+class CreateCompras < ActiveRecord::Migration[5.1]
   def change
     create_table :compras do |t|
       t.integer :valor

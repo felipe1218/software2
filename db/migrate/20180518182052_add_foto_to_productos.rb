@@ -1,4 +1,4 @@
-class AddFotoToProductos < ActiveRecord::Migration[5.2]
+class AddFotoToProductos < ActiveRecord::Migration[5.1]
 	def change
 		def up
 			add_attachment :productos, :foto
