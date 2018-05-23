@@ -236,7 +236,7 @@ es-EC:
         other: Propiedades
       spree/prototype:
         one: Prototipo
-        other: Propotipos
+        other: Prototipos
       spree/refund_reason:
       spree/reimbursement:
       spree/reimbursement_type:
@@ -1212,7 +1212,7 @@ es-EC:
       void:
     states: Provincias
     states_required: Provincias requeridas
-    status: Estatus
+    status: Estado
     stock:
     stock_location: Localización de stock
     stock_location_info: Info localización de stock
