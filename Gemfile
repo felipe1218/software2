@@ -6,6 +6,7 @@ ruby '2.4.1'
 gem 'spree', '~> 3.3'
 gem 'spree_auth_devise', '~> 3.3'
 gem 'spree_gateway', '~> 3.3'
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 
 gem "paperclip", "~> 5.2.1"
 gem 'rmagick'
