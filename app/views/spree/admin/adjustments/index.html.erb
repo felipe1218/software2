@@ -18,14 +18,7 @@
   </div>
 <% end %>
 
-<% if @order.can_add_coupon? %>
-  <div class="well" data-hook="adjustments_new_coupon_code">
-    <div class="form-group">
-      <%= text_field_tag "coupon_code", "", placeholder: Spree.t(:coupon_code), class: "form-control" %>
-    </div>
-    <%= button Spree.t(:add_coupon_code), 'plus', 'submit', id: "add_coupon_code" %>
-  </div>
-<% end %>
+
 
 <%= javascript_tag do %>
   var order_number = '<%= @order.number %>';
