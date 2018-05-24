@@ -5,12 +5,12 @@
             locals: { product: @product } %>
 
 <% cache cache_key_for_product do %>
-  <div data-hook="product_show" class="row" itemscope itemtype="https://schema.org/Product">
+  <div data-hook="product_show" class="row" itemscope itemtype="https://schema.org/Product" >
     <div class="col-md-4 col-sm-5" data-hook="product_left_part">
       <div data-hook="product_left_part_wrap">
         <div id="product-images" data-hook="product_images">
           <div id="main-image" class="panel panel-default" data-hook>
-            <div class="panel-body text-center">
+            <div class="panel-body text-center"  style="border: 2px solid #2d6324; box-shadow: 5px -5px 5px 0px gray;">
               <%= product_image(@product, itemprop: "image") %>
             </div>
           </div>
