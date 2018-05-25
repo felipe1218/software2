@@ -13,3 +13,4 @@ class ApplicationController < ActionController::Base
 	            devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password, :current_password, :tipo_documento, :numero_documento, :nombre, :telefono, :celular, :direccion, :ciudad, :departamento, :pais, :profesion])
 	    end
 end
+
